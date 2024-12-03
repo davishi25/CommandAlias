@@ -1,0 +1,16 @@
+[
+{
+  "modid": "commandalias",
+  "name": "Command Alias",
+  "description": "allows you to create custom aliases for any command",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["davishi"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
