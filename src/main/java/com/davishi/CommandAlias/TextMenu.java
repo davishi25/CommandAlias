@@ -10,6 +10,8 @@ import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StringUtils;
 
+import java.util.Map;
+
 public class TextMenu extends CommandBase {
     @Override
     public String getCommandName(){return "ca";}
@@ -24,6 +26,10 @@ public class TextMenu extends CommandBase {
             addMessage(EnumChatFormatting.DARK_AQUA + "---------------");
             addMessage(EnumChatFormatting.AQUA + "Command Aliases");
             addMessage(EnumChatFormatting.DARK_AQUA + "---------------");
+            System.out.println(CommandAlias.aliases.entrySet());
+            for(Map.Entry<String,String> entry : CommandAlias.aliases.entrySet()){
+                addMessage(entry.getKey() + " -> " + entry.getValue());
+            }
             //print out the array
         } else if (args.length == 3 && args[0].equals("register")){
             //register the command into text file
@@ -31,6 +37,7 @@ public class TextMenu extends CommandBase {
                 addMessage(EnumChatFormatting.RED + "Error: alias must start with /");
             } else {
                 addMessage(EnumChatFormatting.GREEN + "Successfully registered " + args[1]);
+
             }
         } else{
             addMessage(EnumChatFormatting.RED + "Wrong Usage");
